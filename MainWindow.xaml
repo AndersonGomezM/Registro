@@ -1,0 +1,71 @@
+﻿<Window x:Class="Registro.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Registro"
+        mc:Ignorable="d"
+        Title="Registro" Icon="/Resources/Registro.ico" Height="600" Width="500">
+    <Grid>
+        
+        <StackPanel Margin="10" Orientation="Vertical">
+
+            <TextBlock Text="Registro de roles" FontSize="20" />
+            
+            <StackPanel Margin="20" Orientation="Vertical">
+
+                <StackPanel Margin="5" Orientation="Horizontal">
+
+                    <TextBlock Text="RolId" Margin="5" FontSize="14" />
+                    <TextBox x:Name="RolIdTextBox" Text="0" Height="20" Width="150" />
+
+                </StackPanel>
+
+                <StackPanel Margin="5" Orientation="Horizontal">
+
+                    <TextBlock Text="Fecha" Margin="5" FontSize="14" />
+                    <TextBox x:Name="FechaTextBox" Text="" Height="20" Width="150" />
+
+                </StackPanel>
+
+                <StackPanel Margin="5" Orientation="Horizontal">
+
+                    <TextBlock Text="Descripción" Margin="5" FontSize="14" />
+                    <TextBox x:Name="DescripcionTextBox" Text="" Height="20" Width="150" />
+
+                </StackPanel>
+
+                <!-- BARRA DE BOTONES -->
+                <StackPanel Margin="10" Orientation="Horizontal" HorizontalAlignment="Center" >
+
+                    <Button x:Name="GuardarButton" Margin="5,0" Click="GuardarButton_Click" >
+                        <StackPanel Orientation="Horizontal" >
+                            <Image Source="\Resources\Guardar.png"  />
+                            <Label Content="Guardar" /> 
+                        </StackPanel>
+                    </Button>
+
+                    <Button x:Name="EditarButton" Margin="5,0" Click="EditarButton_Click" >
+                        <StackPanel Orientation="Horizontal" >
+                            <Image Source="\Resources\Editar.png"  />
+                            <Label Content="Editar" />
+                        </StackPanel>
+                    </Button>
+
+                    <Button x:Name="EliminarButton" Margin="5,0" Click="EliminarButton_Click" >
+                        <StackPanel Orientation="Horizontal" >
+                            <Image Source="\Resources\Eliminar.png"  />
+                            <Label Content="Eliminar" />
+                        </StackPanel>
+                    </Button>
+
+                </StackPanel>
+
+                <!-- BASE DE DATOS -->
+                <DataGrid x:Name="BaseDeDatos" Height="300" Width="400" HorizontalAlignment="Center" />
+
+            </StackPanel>
+            
+        </StackPanel>
+    </Grid>
+</Window>
